@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Block Lab Login</title><link rel="stylesheet" href="style.css"></head><body><main>
+<h1>Connecting to Block Lab Uploader…</h1><p id="msg" class="mut">Handing the approval back to the uploader on this computer.</p>
+<script>
+// TikTok redirects here with ?code=...&state=...; pass it to the local helper.
+var q = location.search;
+if (q.indexOf("code=") >= 0) { location.replace("http://localhost:8765/callback" + q); }
+else { document.getElementById("msg").textContent = "No approval code found. Close this tab and try again."; }
+</script></main></body></html>
